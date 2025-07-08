@@ -18,28 +18,83 @@ const Header = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                        <ul className="flex align-middle flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg text-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-                            <li>
-                                <Link to={"/"} className={`${pathname == '/' ? "block  text-white rounded-sm md:hover:border-b-2 border-violet-600" : "block hover:bg-gray-100 md:hover:bg-transparent  md:p-0"}`} >Home</Link>
-                            </li>
-                            <li>
-                                <Link to={"about"} className={`${pathname == 'about' ? "block  text-white rounded-sm md:hover:border-b-2 border-violet-600" : "block hover:bg-gray-100 md:hover:bg-transparent  md:p-0"}`} >about</Link>
-                            </li>
-                            <li>
-                                <Link to={"project"} className={`${pathname == 'project' ? "block  text-white rounded-sm md:hover:border-b-2 border-violet-600" : "block hover:bg-gray-100 md:hover:bg-transparent  md:p-0"}`} >Project</Link>
-                            </li>
-                            <li>
-                                <Link to={"blog"} className={`${pathname == 'blog' ? "block  text-white rounded-sm md:hover:border-b-2 border-violet-600" : "block hover:bg-gray-100 md:hover:bg-transparent  md:p-0"}`} >Blog</Link>
-                            </li>
-                            <li>
-                                <Link to={"achievement"} className={`${pathname == 'achievement' ? "block  text-white rounded-sm md:hover:border-b-2 border-violet-600" : "block hover:bg-gray-100 md:hover:bg-transparent  md:p-0"}`} >Achievment</Link>                            </li>
-                            <li>
-                                <Link to={"resorces"} className={`${pathname == 'resorces' ? "block  text-white rounded-sm md:hover:border-b-2 border-violet-600" : "block hover:bg-gray-100 md:hover:bg-transparent  md:p-0"}`} >Resorces</Link>                            </li>
-                            <li>
-                                <Link to={"contact"} className={`${pathname == 'contact' ? "block  text-white rounded-sm md:hover:border-b-2 border-violet-600" : "block hover:bg-gray-100 md:hover:bg-transparent  md:p-0"}`} >Contact</Link>                            </li>
-                        </ul>
-                    </div>
+                    <ul className="flex align-middle flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg text-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                        <li>
+                            <Link
+                                to="/"
+                                className={`block rounded-sm md:p-0 ${pathname === "/"
+                                        ? "text-white border-b-2 border-violet-600"
+                                        : "hover:border-b-2 hover:border-violet-600 border-transparent  transition-all"
+                                    }`}
+                            >
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/about"
+                                className={`block rounded-sm md:p-0 ${pathname === "/about"
+                                        ? "text-white border-b-2 border-violet-600"
+                                        : "hover:border-b-2 hover:border-violet-600 border-transparent transition-all "
+                                    }`}
+                            >
+                                About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/project"
+                                className={`block rounded-sm md:p-0 ${pathname === "/project"
+                                        ? "text-white border-b-2 border-violet-600"
+                                        : "hover:border-b-2 hover:border-violet-600 border-transparent transition-all "
+                                    }`}
+                            >
+                                Project
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/blog"
+                                className={`block rounded-sm md:p-0 ${pathname === "/blog"
+                                        ? "text-white border-b-2 border-violet-600"
+                                        : "hover:border-b-2 hover:border-violet-600 border-transparent  transition-all"
+                                    }`}
+                            >
+                                Blog
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/achievement" className={`block rounded-sm md:p-0 ${pathname === "/achievement"
+                                        ? "text-white border-b-2 border-violet-600"
+                                        : "hover:border-b-2 hover:border-violet-600 border-transparent transition-all "
+                                    }`}>
+                                Achievement
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/resorces"
+                                className={`block rounded-sm md:p-0 ${pathname === "/resorces"
+                                        ? "text-white border-b-2 border-violet-600"
+                                        : "hover:border-b-2 hover:border-violet-600 border-transparent transition-all"
+                                    }`}
+                            >
+                                Resources
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/contact"
+                                className={`block rounded-sm md:p-0 ${pathname === "/contact"
+                                        ? "text-white border-b-2 border-violet-600"
+                                        : "hover:border-b-2 hover:border-violet-600 border-transparent transition-all"
+                                    }`}
+                            >
+                                Contact
+                            </Link>
+                        </li>
+                    </ul>
+
                 </div>
             </nav>
 
