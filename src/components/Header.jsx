@@ -43,13 +43,13 @@ const Header = () => {
                         </li>
                         <li>
                             <Link
-                                to="/project"
-                                className={`block rounded-sm md:p-0 ${pathname === "/project"
+                                to="/skills"
+                                className={`block rounded-sm md:p-0 ${pathname === "/skills"
                                         ? "text-white border-b-2 border-violet-600"
                                         : "hover:border-b-2 hover:border-violet-600 border-transparent transition-all "
                                     }`}
                             >
-                                Project
+                                Skills
                             </Link>
                         </li>
                         <li>

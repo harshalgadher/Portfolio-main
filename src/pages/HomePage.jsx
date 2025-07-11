@@ -1,6 +1,7 @@
 import BlurText from "../components/BlurText"
 import FadeContent from "../components/FadeContent "
 import About from "./About"
+import Skills from "./Skills"
 
 const HomePage = () => {
     return (
@@ -27,31 +28,35 @@ const HomePage = () => {
                         <div className="w-40 justify-center whitespace-nowrap text-sm font-medium disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive shadow-xs h-9 px-4 py-2 has-[>svg]:px-3 bg-purple-400 flex items-center gap-2 cursor-pointer hover:bg-purple-400 text-white rounded-md transition-transform duration-300 hover:scale-105">
                             <button><i className="ri-git-repository-line"></i> Download Resume</button>
                         </div>
+                            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                         <div className="flex space-x-4 mt-6">
-                            <div className="text-lg text-white opacity-50 hover:opacity-100 transition-all">
-                                <a href="" className="text-xl"><i class="ri-github-fill"></i></a>
-                            </div>
-                            <div className="text-lg text-white opacity-50 hover:opacity-100 transition-all">
-                                <a href="" className="text-xl"><i class="ri-twitter-fill"></i></a>
-                            </div>
-                            <div className="text-lg text-white opacity-50 hover:opacity-100 transition-all">
-                                <a href="" className="text-xl"><i class="ri-linkedin-fill"></i></a>
-                            </div>
-                            <div className="text-lg text-white opacity-50 hover:opacity-100 transition-all">
-                                <a href="" className="text-xl"><i class="ri-mail-fill"></i></a>
-                            </div>
+
+                                <div className="text-lg text-white opacity-50 hover:opacity-100 transition-all">
+                                    <a href="" className="text-xl"><i class="ri-github-fill"></i></a>
+                                </div>
+                                <div className="text-lg text-white opacity-50 hover:opacity-100 transition-all">
+                                    <a href="" className="text-xl"><i class="ri-twitter-fill"></i></a>
+                                </div>
+                                <div className="text-lg text-white opacity-50 hover:opacity-100 transition-all">
+                                    <a href="" className="text-xl"><i class="ri-linkedin-fill"></i></a>
+                                </div>
+                                <div className="text-lg text-white opacity-50 hover:opacity-100 transition-all">
+                                    <a href="" className="text-xl"><i class="ri-mail-fill"></i></a>
+                                </div>
                         </div>
+                            </FadeContent>
                     </div>
                     <div className="w-5/12">
                         <div className="flex justify-content-center align-items-center">
                             <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                                <img src="/men.jpg" alt="img" className="bg-cover content-center"/>
+                                <img src="/men.jpg" alt="img" className="bg-cover content-center" />
                             </FadeContent>
                         </div>
                     </div>
                 </div>
             </div>
             <About />
+            <Skills />
         </div>
     )
 }
