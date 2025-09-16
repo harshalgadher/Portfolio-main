@@ -10,7 +10,7 @@ const About = () => {
               <h2 class="text-4xl font-bold text-center text-white mb-12">Quick Facts <span className="text-purple-400">About Me</span></h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-white">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-white">
               <div>
                 <div class="flex flex-col items-center text-center">
                   <div class="bg-purple-400 p-3 rounded-lg mb-4">
@@ -36,15 +36,6 @@ const About = () => {
                   </div>
                   <h3 class="font-bold mb-2">Open Source Contributor</h3>
                   <p className="text-sm text-gray-300">Collaborating on projects like Zero Hunger, improving social impact tech</p>
-                </div>
-              </div>
-              <div>
-                <div class="flex flex-col items-center text-center">
-                  <div class="bg-purple-400 p-3 rounded-lg mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database w-6 h-6"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
-                  </div>
-                  <h3 class="font-bold mb-2">Backend Developer</h3>
-                  <p className="text-sm text-gray-300">Managing databases, authentication, and APIs for high-performance applications</p>
                 </div>
               </div>
               <div>
