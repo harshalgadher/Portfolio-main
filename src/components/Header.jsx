@@ -6,7 +6,7 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <nav className="w-full z-20 top-0 start-0 mb-5 bg-[#0a0e1a] text-white py-4 shadow-md">
+        <nav className="w-full z-20 top-0 start-0 mb-5k bg-[#0a0e1a] text-white py-4 shadow-md">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Logo */}
                 <Link to="/" className="flex items-center space-x-2">
