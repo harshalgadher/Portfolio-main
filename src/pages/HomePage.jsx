@@ -46,13 +46,6 @@ const HomePage = () => {
                             </p>
                         </div>
 
-                        {/* Resume Button */}
-                        <div className="flex justify-center md:justify-start">
-                            <button className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold px-5 py-3 rounded-lg transition-transform duration-300 hover:scale-105 shadow-md">
-                                <i className="ri-git-repository-line"></i> Download Resume
-                            </button>
-                        </div>
-
                         {/* Social Links */}
                         <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                             <div className="flex justify-center md:justify-start space-x-5 mt-8">
