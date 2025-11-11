@@ -1,70 +1,97 @@
-import BlurText from "../components/BlurText"
-import FadeContent from "../components/FadeContent "
-import About from "./About"
-import Achivment from "./Achivment"
-import Skills from "./Skills"
-import Contact from "./Contact"
-
-
+import BlurText from "../components/BlurText";
+import FadeContent from "../components/FadeContent";
+import About from "./About";
+import Achivment from "./Achivment";
+import Skills from "./Skills";
+import Contact from "./Contact";
 
 const HomePage = () => {
     return (
         <div className="main-bg">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-                <div className="row flex">
-                    <div className="w-8/12">
-                        <h2 className="text-5xl text-white font-bold mb-3">
-                            Hi, I'm
-                            < BlurText text="Harshal Gadher"
+            {/* Wrapper */}
+            <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between px-4 md:px-8 py-10">
+                {/* Row */}
+                <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between w-full gap-10">
+                    {/* Left Content */}
+                    <div className="w-full md:w-7/12 text-center md:text-left">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-4 leading-snug">
+                            Hi, I'm{" "}
+                            <BlurText
+                                text="Harshal Gadher"
                                 delay={150}
                                 animateBy="words"
                                 direction="top"
-                                className="text-purple-400"
+                                className="text-purple-400 inline-block"
                             />
                         </h2>
-                        <p className="text-white text-lg">I am a Software Engineering student passionate about building impactful solutions. I specialize in developing software that bridges technology and real-world challenges, ensuring efficiency, usability, and meaningful impact.</p>
-                        <p className=" text-white text-lg mt-3">
-                            My work spans web development, cloud computing, DevOps, and cybersecurity, driven by a belief that technology should solve problems, not create them. I am dedicated to crafting scalable, effective, and user-centric solutions while fostering a culture of collaboration, knowledge-sharing, and continuous improvement.
-                        </p>
-                        <div className="my-6 font-semibold p-4 border-l-4 border-purple-400 ">
-                            <p className="italic text-blue-200">A Student Fueled By Curiosity , Innovative Ideas And Continuous Learning, Figuring Out Stuff !!</p>
-                        </div>
-                        <div className="w-40 justify-center whitespace-nowrap text-sm font-medium disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive shadow-xs h-9 px-4 py-2 has-[>svg]:px-3 bg-purple-400 flex items-center gap-2 cursor-pointer hover:bg-purple-400 text-white rounded-md transition-transform duration-300 hover:scale-105">
-                            <button><i className="ri-git-repository-line"></i> Download Resume</button>
-                        </div>
-                            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                        <div className="flex space-x-4 mt-6">
 
-                                <div className="text-lg text-white opacity-50 hover:opacity-100 transition-all">
-                                    <a href="" className="text-xl"><i className="ri-github-fill"></i></a>
-                                </div>
-                                <div className="text-lg text-white opacity-50 hover:opacity-100 transition-all">
-                                    <a href="" className="text-xl"><i className="ri-twitter-fill"></i></a>
-                                </div>
-                                <div className="text-lg text-white opacity-50 hover:opacity-100 transition-all">
-                                    <a href="" className="text-xl"><i className="ri-linkedin-fill"></i></a>
-                                </div>
-                                <div className="text-lg text-white opacity-50 hover:opacity-100 transition-all">
-                                    <a href="" className="text-xl"><i className="ri-mail-fill"></i></a>
-                                </div>
+                        <p className="text-white text-base sm:text-lg leading-relaxed">
+                            I am a Software Engineering student passionate about building impactful
+                            solutions. I specialize in developing software that bridges technology and
+                            real-world challenges, ensuring efficiency, usability, and meaningful impact.
+                        </p>
+
+                        <p className="text-white text-base sm:text-lg mt-4 leading-relaxed">
+                            My work spans web development, cloud computing, DevOps, and cybersecurity,
+                            driven by a belief that technology should solve problems, not create them. I
+                            am dedicated to crafting scalable, effective, and user-centric solutions while
+                            fostering a culture of collaboration, knowledge-sharing, and continuous
+                            improvement.
+                        </p>
+
+                        <div className="my-6 font-semibold p-4 border-l-4 border-purple-400 bg-white/5 rounded-md text-white">
+                            <p className="italic text-blue-200 text-sm sm:text-base">
+                                A Student Fueled By Curiosity, Innovative Ideas And Continuous Learning,
+                                Figuring Out Stuff!!
+                            </p>
                         </div>
-                            </FadeContent>
+
+                        {/* Resume Button */}
+                        <div className="flex justify-center md:justify-start">
+                            <button className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold px-5 py-3 rounded-lg transition-transform duration-300 hover:scale-105 shadow-md">
+                                <i className="ri-git-repository-line"></i> Download Resume
+                            </button>
+                        </div>
+
+                        {/* Social Links */}
+                        <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+                            <div className="flex justify-center md:justify-start space-x-5 mt-8">
+                                <a href="#" className="text-2xl text-white opacity-60 hover:opacity-100 transition-all">
+                                    <i className="ri-github-fill"></i>
+                                </a>
+                                <a href="#" className="text-2xl text-white opacity-60 hover:opacity-100 transition-all">
+                                    <i className="ri-twitter-fill"></i>
+                                </a>
+                                <a href="#" className="text-2xl text-white opacity-60 hover:opacity-100 transition-all">
+                                    <i className="ri-linkedin-fill"></i>
+                                </a>
+                                <a href="#" className="text-2xl text-white opacity-60 hover:opacity-100 transition-all">
+                                    <i className="ri-mail-fill"></i>
+                                </a>
+                            </div>
+                        </FadeContent>
                     </div>
-                    <div className="w-5/12">
-                        <div className="flex justify-content-center align-items-center">
-                            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                                <img src="/my-img.jpg" alt="img" className="bg-cover rounded-lg ml-28 mb-5 content-center w-9/12" />
-                            </FadeContent>
-                        </div>
+
+                    {/* Right Image */}
+                    <div className="w-full md:w-5/12 flex justify-center md:justify-end">
+                        <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+                            <img
+                                src="/my-img.jpg"
+                                alt="Harshal"
+                                className="rounded-xl w-8/12 sm:w-6/12 md:w-10/12 lg:w-9/12 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-cover"
+                            />
+                        </FadeContent>
                     </div>
                 </div>
             </div>
+
+            {/* Other Sections */}
             <About />
             <Skills />
             <Achivment />
             <Contact />
         </div>
-    )
-}
+    );
+};
 
-export default HomePage
+export default HomePage;
